@@ -8,7 +8,7 @@ function App() {
 
   return (
     <>
-      <div style={{ color: "var(--yellow-orange)" }}>dsad</div>
+    
     </>
   );
 }
