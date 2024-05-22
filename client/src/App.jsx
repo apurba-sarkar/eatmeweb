@@ -11,10 +11,11 @@ function App() {
 
   return (
     <>
-      <div>sad</div>
+      {/* <div>sad</div> */}
 
-      <Menu />
+      {/* <Menu /> */}
       <Routes>
+        <Route exact path="/Menu" element={<Menu/>}/>
         <Route path="/single/:id" element={<SingleDish/>}/>
       </Routes>
     </>
