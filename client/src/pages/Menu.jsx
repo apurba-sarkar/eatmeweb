@@ -4,7 +4,6 @@ import data from "../data";
 // import SingleDish from "./SingleDish";
 import { NavLink} from "react-router-dom";
 export default function Menu() {
-  // const { id } = useParams();
   console.log(data)
   console.log(data[0].id);
   
