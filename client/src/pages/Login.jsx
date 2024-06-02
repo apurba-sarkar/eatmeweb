@@ -1,3 +1,6 @@
+import { Button } from "../ui/Button";
+import { Headings } from "../ui/Headings";
+
 export default function Login() {
   return (
     <div>
@@ -6,7 +9,9 @@ export default function Login() {
         <h1>Login</h1>
         <input type="text" placeholder="phone number" />
         <input type="password" placeholder="password" />
+        <Headings type="h2">hello</Headings>
         <button>Login</button>
+        <Button type="primary">login</Button>
       </div>
     </div>
   );
