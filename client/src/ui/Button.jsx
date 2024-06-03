@@ -20,7 +20,7 @@ const slideIn = keyframes`
 `;
 
 const Button = styled.button`
-  /* animation: ${fadeIn} 2s ease-in-out; */
+  animation: ${fadeIn} 2s ease-in-out;
   padding: 0.5rem 1rem;
   /* background-color:"yellow"; */
   border: none;
@@ -32,11 +32,15 @@ const Button = styled.button`
     props.type === "primary" &&
     css`
       background-color: ${theme.colors.primary};
+      border: solid 2px ${theme.colors.primary};
+      color: ${theme.colors.other};
     `}
   ${(props) =>
     props.type === "secondary" &&
     css`
-      background-color: ${theme.colors.secondary};
+      color: ${theme.colors.primary};
+      background-color: ${theme.colors.other};
+      border: solid 2px ${theme.colors.primary};
 
       /* animation: ${slideIn} 2s ease-in-out; */
     `}

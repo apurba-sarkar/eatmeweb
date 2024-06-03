@@ -10,7 +10,7 @@ export default function Login() {
         <input type="text" placeholder="phone number" />
         <input type="password" placeholder="password" />
         <Headings type="h1">hello</Headings>
-        <button>Login</button>
+        <Button type="secondary">Other</Button>
         <Button type="primary">login</Button>
       </div>
     </div>

@@ -16,10 +16,10 @@ const Headings = styled.h1`
       font-weight: 400;
     `}
   ${(props) =>
-    props.type === "h3" &&
+    props.type === "nav" &&
     css`
       font-size: 2rem;
-      font-weight: 200;
+      font-weight: 600;
     `}
 `;
 
