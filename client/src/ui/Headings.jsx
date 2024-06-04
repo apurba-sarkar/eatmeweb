@@ -12,7 +12,7 @@ const type = {
   `,
   h2: css`
     font-size: 3rem;
-    font-weight: 400;
+    font-weight: 600;
   `,
   nav: css`
     font-size: 2rem;

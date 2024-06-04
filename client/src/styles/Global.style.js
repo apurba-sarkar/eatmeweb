@@ -32,6 +32,9 @@ a{
     
 }
 
+a.active{
+border-bottom: .5rem solid ${theme.colors.primary}
+}
 
 .links{
     display:flex;
@@ -168,7 +171,6 @@ padding-top:10rem;
 
 .login-card{
     display:flex;
-/* background-color:green; */
 display:flex;
 align-items:center;
 gap:10rem
@@ -191,6 +193,22 @@ gap:10rem
    margin-top:-10rem;
    
 
+}
+
+/* -------------profile-------------- */
+
+
+.profile{
+    display:flex;
+    justify-content:space-around
+}
+
+/* --pd */
+.pd{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:.5rem;
 }
 `;
 
