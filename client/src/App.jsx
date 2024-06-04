@@ -12,6 +12,7 @@ import Signup from './pages/Signup';
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 import Contactus from "./pages/Contactus";
+import Aboutus from "./pages/Aboutus";
 
 
 
@@ -27,6 +28,7 @@ function App() {
         <Route exact path="/login" element={<Login/>}/>
         <Route exact path="/signup" element={<Signup/>}/>
         <Route exact path="/Menu" element={<Menu/>}/>
+        <Route exact path="/aboutus" element={<Aboutus/>}/>
         <Route exact path="/contactus" element={<Contactus/>}/>
         <Route path="/single/:id" element={<SingleDish/>}/>
       </Routes>

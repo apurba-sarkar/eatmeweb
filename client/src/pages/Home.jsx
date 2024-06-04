@@ -1,4 +1,4 @@
-import Navbar from "../Components/Navbar";
+
 import { Button } from "../ui/Button";
 import { Headings } from "../ui/Headings";
 

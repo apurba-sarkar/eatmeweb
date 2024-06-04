@@ -18,6 +18,8 @@ const type = {
     font-size: 2rem;
     font-weight: 600;
   `,
+  
+
 };
 
 

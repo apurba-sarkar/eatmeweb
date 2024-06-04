@@ -118,6 +118,80 @@ form{
     gap:1.5rem
 
 }
+
+
+/* -----------about us-------------- */
+
+.aboutus img {
+width: 100vw
+}
+
+.aboutus-main{
+display:flex;
+justify-content:space-evenly;
+padding-top:10rem;
+/* align-items:baseline */
+}
+.aboutus-main img{
+    height:20rem;
+    width:20rem;
+
+    
+}
+
+.abtus-cnt{
+    width:100rem
+}
+/* .aboutus{
+    display:flex;
+    align-items:center;
+
+} */
+
+
+/* ---------------login------------------ */
+
+
+.login div{
+    display:flex;
+ /* flex-direction:column; */
+ /* align-items:center
+  */
+    
+}
+
+.login-head{
+    display:flex;
+    justify-content:center;
+    /* flex-direction:row */
+}
+
+.login-card{
+    display:flex;
+/* background-color:green; */
+display:flex;
+align-items:center;
+gap:10rem
+/* flex-direction:column  */
+}
+
+  .login-photo{
+    background-image:url("./login.jpg");
+    height:60rem;
+    width:50vw;
+    overflow:hidden;
+   background-size:cover;
+   background-position: 50% 50%;
+  }  
+
+.login-data{
+   display:flex;
+   flex-direction:column;
+   gap:2rem;
+   margin-top:-10rem;
+   
+
+}
 `;
 
 export default GlobalStyle;
