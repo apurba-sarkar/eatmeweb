@@ -27,7 +27,7 @@ const size = {
     font-weight:bold;
   `,
   m:css`
-     padding:1.5rem 2rem;
+     padding:1rem 2rem;
     font-size:1.2rem;
     font-weight:bold;
     /* width:20rem; */
@@ -65,7 +65,6 @@ const Button = styled.button`
   padding: 0.5rem 1rem;
   border: solid 2px ${theme.colors.primary};
   /* background-color:"yellow"; */
-  border: none;
   border-radius: 0.3rem;
   &:hover {
     cursor: pointer;

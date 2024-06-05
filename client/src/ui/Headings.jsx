@@ -18,7 +18,10 @@ const type = {
     font-size: 2rem;
     font-weight: 600;
   `,
-  
+  label:css`
+    font-size:1.5rem;
+    align-self:flex-start;
+  `
 
 };
 

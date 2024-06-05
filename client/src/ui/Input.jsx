@@ -14,7 +14,7 @@ const Input = styled.input`
   background-color: ${theme.colors.secondary};
   border: none;
   padding:.5rem 1rem;
-  width:40rem;
+  width:30rem;
   ${(props)=>varient[props.varient]}
   &:focus {
     outline: none;

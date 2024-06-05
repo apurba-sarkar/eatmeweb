@@ -173,7 +173,7 @@ padding-top:10rem;
     display:flex;
 display:flex;
 align-items:center;
-gap:10rem
+gap:20rem;
 /* flex-direction:column  */
 }
 
@@ -200,7 +200,8 @@ gap:10rem
 
 .profile{
     display:flex;
-    justify-content:space-around
+    justify-content:center;
+    gap:20rem;
 }
 
 /* --pd */
@@ -210,6 +211,46 @@ gap:10rem
     align-items:center;
     gap:.5rem;
 }
+
+.profilelogo{
+height:10rem;
+aspect-ratio:1;
+background-color:red;
+border-radius:50%;
+
+};
+
+/* --wallet */
+
+figure{
+    height:20rem;
+    background-color:red;
+    width:35rem;
+    background-image:url("./card.jpg");
+    font-family: 'Credit Card', sans-serif;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+    align-items:end;
+    border:.2rem solid ${theme.colors.primary};
+    border-radius:1rem;
+    
+}
+.card-number{
+
+    margin-right:2rem;
+}
+
+/* .card-data{
+    font-family: 'Credit Card', sans-serif;
+    
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+
+} */
+
+
 `;
 
 export default GlobalStyle;
