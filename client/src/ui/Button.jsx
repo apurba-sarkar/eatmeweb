@@ -20,44 +20,42 @@ const slideIn = keyframes`
 `;
 
 const size = {
-
-  l:css`
-    padding:2rem 3rem;
-    font-size:2rem;
-    font-weight:bold;
+  l: css`
+    padding: 2rem 3rem;
+    font-size: 2rem;
+    font-weight: bold;
   `,
-  m:css`
-     padding:1rem 2rem;
-    font-size:1.2rem;
-    font-weight:bold;
+  m: css`
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
     /* width:20rem; */
   `,
-  s:css`
-     padding:1rem 1.5rem;
-    font-size:1rem;
-    font-weight:bold;
-  `
-  ,
-  other:css`
-    font-size:2rem;;
-     font-weight:bold;
-  `
+  s: css`
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+  `,
+  other: css`
+    font-size: 2rem;
+    font-weight: bold;
+  `,
 };
 const varient = {
   primary: css`
     background-color: ${theme.colors.primary};
     color: ${theme.colors.other};
-    `,
+  `,
   secondary: css`
     color: ${theme.colors.primary};
     background-color: ${theme.colors.other};
-
-    `,
-    register:css`
-      color: ${theme.colors.primary};
+  `,
+  register: css`
+    color: ${theme.colors.primary};
     background-color: transparent;
-   text-decoration:underline;
-   `
+    text-decoration: underline;
+    border: none;
+  `,
 };
 
 const Button = styled.button`
@@ -71,7 +69,7 @@ const Button = styled.button`
   }
 
   &:active {
-    color:${theme.colors.secondary}
+    color: ${theme.colors.secondary};
   }
   ${(props) => varient[props.varient]}
   ${(props) => size[props.size]}

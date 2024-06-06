@@ -201,7 +201,7 @@ gap:20rem;
 .profile{
     display:flex;
     justify-content:center;
-    gap:20rem;
+    gap:10rem;
 }
 
 /* --pd */
@@ -227,30 +227,76 @@ figure{
     background-color:red;
     width:35rem;
     background-image:url("./card.jpg");
-    font-family: 'Credit Card', sans-serif;
     display:flex;
     flex-direction:column;
-    justify-content:flex-end;
-    align-items:end;
+    justify-content:center;
+    font-family: 'Credit Card';
+    align-items:center;
     border:.2rem solid ${theme.colors.primary};
     border-radius:1rem;
+    font-weight:bolder;
     
 }
 .card-number{
 
-    margin-right:2rem;
+    /* margin-right:2rem; */
+    font-size:3rem;
+    
 }
 
-/* .card-data{
-    font-family: 'Credit Card', sans-serif;
+.card-data{
+    margin-top:7rem;
+
+}
+
+.other-details{
+    font-size:1.5rem;
+    margin-top:1.5rem
+}
+
+.trans{
+    display:grid;
+    /* align-items:center;
+    justify-content:center; */
+    /* flex-direction:column; */
+}
+
+
+.last-details{
+    display:flex;
+    align-items:center;
+    justify-content:space-between
+
+}
+
+.balance{
+    font-size:3.5rem
+}
+
+/* -->orders */
+.orders{
+    width:40rem;
+}
+
+.support{
+    margin-top:5rem;
+}
+
+/* --------------menu----------- */
+
+.menu-container{
+    display:grid;
+    grid-template-columns:1fr 2fr 2fr;
+    background-color:red;
+    padding:0 10rem;
     
+}
+
+.menu-list{
     display:flex;
     flex-direction:column;
-    justify-content:flex-end;
 
-} */
-
-
+}
 `;
 
 export default GlobalStyle;

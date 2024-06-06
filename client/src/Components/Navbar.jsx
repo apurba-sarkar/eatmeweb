@@ -21,7 +21,7 @@ export default function Navbar() {
           {" "}
           <Headings type="nav"> About Us</Headings>{" "}
         </NavLink>
-        <NavLink to="/menus">
+        <NavLink to="/menu">
           <Headings type="nav"> Menus</Headings>{" "}
         </NavLink>
         <NavLink to="/contactus">

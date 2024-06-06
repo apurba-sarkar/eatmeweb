@@ -14,11 +14,14 @@ export default function Contactus() {
         </Headings>
       </div>
       <form>
-        <Input placeholder="name:" varient="input"/>
-        <Input placeholder="email:" varient="input"/>
-        <Input placeholder="phone" varient="input"/>
-        <InputArea placeholder="feedback"/>
-        <Button varient="primary" size="m">Send <IoMdSend size="1rem"/></Button>
+        <Input placeholder="name:" varient="input" />
+        <Input placeholder="email:" varient="input" />
+        <Input placeholder="phone" varient="input" />
+        <InputArea placeholder="feedback" />
+        <Button varient="primary" size="m">
+          Send <IoMdSend size="1rem" />
+        </Button>
+      
       </form>
     </div>
   );

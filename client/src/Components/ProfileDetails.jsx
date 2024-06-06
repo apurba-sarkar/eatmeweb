@@ -11,7 +11,11 @@ export default function ProfileDetails() {
       </Headings>
       <Input value="ricky sarkar" varient="input" disabled />
       <Headings type="label" colorvar="primary">
-        Gender
+        Pincode
+      </Headings>
+      <Input placeholder="sda" varient="input" disabled />
+      <Headings type="label" colorvar="primary">
+        Mobile
       </Headings>
       <Input placeholder="sda" varient="input" disabled />
       <Headings type="label" colorvar="primary">
@@ -23,10 +27,6 @@ export default function ProfileDetails() {
       </Headings>
       <Input placeholder="sda" varient="input" disabled />
 
-      <Headings type="label" colorvar="primary">
-        Pincode
-      </Headings>
-      <Input placeholder="sda" varient="input" disabled />
       <div style={{display:"flex",gap:"1rem",paddingTop:"1.5em"}}>
         <Button varient="secondary" size="m">
           Edit

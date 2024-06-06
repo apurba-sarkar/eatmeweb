@@ -27,7 +27,7 @@ const InputArea = styled.textarea`
   border: none;
   height:10rem;
   padding:.5rem 1rem;
-  width:40rem;
+  width:30rem;
   resize:none;
   &:focus {
     outline: none;

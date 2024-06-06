@@ -18,9 +18,7 @@ export default function Login() {
           <Button varient="primary" size="m"> Submit</Button>
           <h2>New in this website? <Button varient="register" size="other">Register</Button>here </h2>
         </div>
-       
       </div>
-    
     </div>
   );
 }
