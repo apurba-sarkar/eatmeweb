@@ -287,7 +287,7 @@ figure{
 .menu-container{
     display:grid;
     grid-template-columns:1fr 2fr 2fr;
-    background-color:red;
+    /* background-color:red; */
     padding:0 10rem;
     
 }
@@ -297,6 +297,15 @@ figure{
     flex-direction:column;
 
 }
+
+
+/* -->filters */
+.filters{
+    display:flex;
+    flex-direction:column;
+    gap:2rem;
+}
+
 `;
 
 export default GlobalStyle;

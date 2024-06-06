@@ -56,6 +56,9 @@ const varient = {
     text-decoration: underline;
     border: none;
   `,
+  danger:css`
+  color: ${theme.colors.danger};
+  `
 };
 
 const Button = styled.button`

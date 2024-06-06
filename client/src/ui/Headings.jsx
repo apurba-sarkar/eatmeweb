@@ -32,7 +32,11 @@ const colorvar = {
   `,
   secondary: css`
     color: ${theme.colors.secondary};
-  `,
+    `,
+  other:css`
+  color: ${theme.colors.other};
+    
+  `
 };
     
 const Headings = styled.h1`
