@@ -29,7 +29,8 @@ const TableRow = styled.div`
   /* row-gap:10rem; */
   justify-items: center;
   padding: 1rem 0;
-  border-bottom:2px ${theme.colors.primary} solid
+  border-bottom:2px ${theme.colors.primary} solid;
+  
 
   /* align-items:center;
 justify-content:space-around; */

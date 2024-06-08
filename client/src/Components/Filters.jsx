@@ -11,7 +11,7 @@ export default function Filters() {
        </Headings>
       </Box>
       <Box color="primary" type="option">
-       <Headings type="h3" colorvar="other"> Non Veg 
+       <Headings type="h3" colorvar="other"> Veg Only 
        {/* <GiChickenOven /> */}
        </Headings>
       </Box>
