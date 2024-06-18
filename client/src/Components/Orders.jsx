@@ -9,7 +9,7 @@ export default function Orders() {
       {" "}
       <div className="trans">
         <Headings>Previous Orders</Headings>
-        <TableBuilder>
+        <TableBuilder size="normal">
           <TableHead>
             <TableData>Date</TableData>
             <TableData style={{ justifySelf: "left" }}>Details</TableData>

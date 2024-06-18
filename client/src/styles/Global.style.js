@@ -240,18 +240,18 @@ figure{
 .card-number{
 
     /* margin-right:2rem; */
-    font-size:3rem;
+    font-size:2rem;
     
 }
 
 .card-data{
-    margin-top:7rem;
+    margin-top:8rem;
 
 }
 
 .other-details{
     font-size:1.5rem;
-    margin-top:1.5rem
+    margin-top:2rem
 }
 
 .trans{
@@ -270,7 +270,7 @@ figure{
 }
 
 .balance{
-    font-size:3.5rem
+    font-size:3rem
 }
 
 /* -->orders */
@@ -306,6 +306,31 @@ figure{
     gap:2rem;
 }
 
+/* -->FullDetails */
+
+.fd{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column
+}
+.fd img{
+    height:30rem;
+    width:40rem;
+    border:solid ${theme.colors.primary} .5rem;
+    /* aspect-ratio:1; */
+    object-fit:fill;
+}
+.fd-data{
+    display:flex;
+    flex-direction:column;
+}
+
+.fd-data > h1  {
+   display:flex;
+   align-items:center;
+
+}
 `;
 
 export default GlobalStyle;

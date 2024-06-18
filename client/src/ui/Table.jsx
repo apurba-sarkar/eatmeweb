@@ -1,17 +1,27 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { theme } from "./../styles/theme";
+
+const size = {
+  normal: css`
+    height: 30rem;
+  `,
+  big: css`
+    height: 70rem;
+  `,
+};
 
 const TableBuilder = styled.div`
   /* background-color: green; */
   font-size: 1.5rem;
-  height: 30rem;
-  overflow-x:hidden;
+  ${(props) => size[props.size]};
+
+  overflow-x: hidden;
   /* overflow: scroll; */
   &::-webkit-scrollbar {
     display: none;
     /* width:rem; */
     /* background-color:${theme.colors.primary}; */
-  /* scrollbar-width:none; */
+    /* scrollbar-width:none; */
   }
   &::-webkit-scrollbar-thumb {
     background: #000000;
@@ -29,8 +39,7 @@ const TableRow = styled.div`
   /* row-gap:10rem; */
   justify-items: center;
   padding: 1rem 0;
-  border-bottom:2px ${theme.colors.primary} solid;
-  
+  border-bottom: 2px ${theme.colors.primary} solid;
 
   /* align-items:center;
 justify-content:space-around; */

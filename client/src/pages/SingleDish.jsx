@@ -8,6 +8,7 @@ export default function SingleDish() {
   console.log(id);
   const dish = data.find((item) => item.id === parseInt(id));
   return (
+    
     <div>
       <div>{dish.item}</div>
       <div>{dish.id}</div>

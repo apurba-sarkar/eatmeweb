@@ -2,20 +2,21 @@
 
 import Filters from "../Components/Filters";
 import data from "../data";
+import { CiZoomIn } from "react-icons/ci";
 // import SingleDish from "./SingleDish";
 import { NavLink, useNavigate } from "react-router-dom";
 import { TableBuilder, TableData, TableHead, TableRow } from "../ui/Table";
 import { Button } from "../ui/Button";
 import { useState } from "react";
+import FullDetails from "../Components/FullDetails";
 // import SingleDish from "./SingleDish";
 export default function Menu() {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   console.log(data);
   // console.log(data[0].id);
 
   const [dish, setDish] = useState("");
   // console.log(data[0].item);
-
 
   return (
     <div>
@@ -23,9 +24,9 @@ export default function Menu() {
       <div className="menu-container">
         <Filters />
         <div className="menu-list">
-          <TableBuilder>
+          <TableBuilder size="big">
             <TableHead>
-              <TableData>Sl</TableData>
+              <TableData>item no</TableData>
               <TableData>Item List</TableData>
               {/* <TableData>Ad</TableData> */}
             </TableHead>
@@ -39,22 +40,22 @@ export default function Menu() {
                 <TableData style={{ justifySelf: "left" }}>{e.item} </TableData>
                 <TableData>
                   <Button
+                    size="s"
+                    varient="primary"
                     onClick={() =>
                       // navigate(`/single/${e.id}`)
                       setDish(e)
                     }
                   >
-                    Details
+                    View
                   </Button>
                 </TableData>
               </TableRow>
-              // </NavLink>
             ))}
           </TableBuilder>
         </div>
         <div>
-          <div>{dish.item}</div>
-          <div>{dish.price}</div>
+          <FullDetails dish={dish} />
         </div>
         {/* <SingleDish/> */}
       </div>

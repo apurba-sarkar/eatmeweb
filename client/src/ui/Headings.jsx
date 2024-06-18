@@ -9,6 +9,7 @@ const type = {
   h1: css`
     font-size: 4rem;
     font-weight: 600;
+    text-transform:uppercase;
   `,
   h2: css`
     font-size: 3rem;

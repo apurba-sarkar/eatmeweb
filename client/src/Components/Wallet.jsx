@@ -27,7 +27,7 @@ export default function Wallet() {
       </figure>
       <div className="trans">
         <Headings>Previous Transaction</Headings>
-        <TableBuilder>
+        <TableBuilder size="normal">
           <TableHead>
             <TableData>Date</TableData>
             <TableData style={{justifySelf:"left"}}>Details</TableData>
