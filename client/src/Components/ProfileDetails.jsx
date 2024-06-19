@@ -5,7 +5,8 @@ import { Input } from "../ui/Input";
 export default function ProfileDetails() {
   return (
     <div className="pd">
-      <div className="profilelogo">photo</div>
+      {/* <img src="" alt="" srcset="" /> */}
+      <img src="./profile.jpg" className="profilelogo" />
       <Headings type="label" colorvar="primary">
         Full Name
       </Headings>
@@ -27,7 +28,7 @@ export default function ProfileDetails() {
       </Headings>
       <Input placeholder="sda" varient="input" disabled />
 
-      <div style={{display:"flex",gap:"1rem",paddingTop:"1.5em"}}>
+      <div style={{ display: "flex", gap: "1rem", paddingTop: "1.5em" }}>
         <Button varient="secondary" size="m">
           Edit
         </Button>

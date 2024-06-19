@@ -213,9 +213,9 @@ gap:20rem;
 }
 
 .profilelogo{
-height:10rem;
+height:20rem;
 aspect-ratio:1;
-background-color:red;
+border: ${theme.colors.primary};
 border-radius:50%;
 
 };
@@ -331,6 +331,29 @@ figure{
    align-items:center;
 
 }
+
+/* ---------------cart------------------ */
+
+
+.cart-head{
+    display:flex;
+    justify-content:center;
+/* flex-direction:column; */
+}
+.cart-body{
+    display:flex;
+    justify-content:center;
+
+
+}
+
+/* .cart-body-fr{
+    display:flex;
+    flex-direction:column;
+    background-color:red;
+    width:20rem;
+} */
+
 `;
 
 export default GlobalStyle;

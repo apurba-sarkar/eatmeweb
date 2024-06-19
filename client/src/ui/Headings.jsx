@@ -9,7 +9,7 @@ const type = {
   h1: css`
     font-size: 4rem;
     font-weight: 600;
-    text-transform:uppercase;
+    text-transform: uppercase;
   `,
   h2: css`
     font-size: 3rem;
@@ -19,13 +19,11 @@ const type = {
     font-size: 2rem;
     font-weight: 600;
   `,
-  label:css`
-    font-size:1.5rem;
-    align-self:flex-start;
-  `
-
+  label: css`
+    font-size: 1.5rem;
+    align-self: flex-start;
+  `,
 };
-
 
 const colorvar = {
   primary: css`
@@ -33,13 +31,15 @@ const colorvar = {
   `,
   secondary: css`
     color: ${theme.colors.secondary};
-    `,
-  other:css`
-  color: ${theme.colors.other};
-    
-  `
+  `,
+  other: css`
+    color: ${theme.colors.other};
+  `,
+  danger: css`
+    color: ${theme.colors.danger};
+  `,
 };
-    
+
 const Headings = styled.h1`
   ${(props) => type[props.type]}
   ${(props) => colorvar[props.colorvar]}

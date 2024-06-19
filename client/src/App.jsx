@@ -14,6 +14,7 @@ import Footer from "./Components/Footer";
 import Contactus from "./pages/Contactus";
 import Aboutus from "./pages/Aboutus";
 import Profile from "./pages/Profile";
+import Cart from "./pages/Cart";
 
 
 
@@ -32,6 +33,7 @@ function App() {
         <Route exact path="/Menu" element={<Menu/>}/>
         <Route exact path="/aboutus" element={<Aboutus/>}/>
         <Route exact path="/contactus" element={<Contactus/>}/>
+        <Route exact path="/cart" element={<Cart/>}/>
         <Route path="/single/:id" element={<SingleDish/>}/>
       </Routes>
       <Footer/>
