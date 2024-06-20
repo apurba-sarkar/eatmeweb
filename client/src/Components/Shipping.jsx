@@ -1,3 +1,4 @@
+import { Box } from "../ui/Box";
 import { Headings } from "../ui/Headings";
 import { Input } from "../ui/Input";
 
@@ -5,7 +6,7 @@ export default function Shipping() {
   return (
     <div>
       <div>
-        <Headings>Shipping</Headings>
+        <Headings>SHIPPING</Headings>
         <Headings type="label">Full Name</Headings>
         <Input placeholder="" />
         <Headings type="label">Address</Headings>
@@ -23,7 +24,16 @@ export default function Shipping() {
         </Headings>
       </div>
       <div>
-        <Headings>Shipping Methods</Headings>
+        <Headings>SHIPPING METHODS</Headings>
+        <div>
+          <Box color="primary" type="box">
+            <div className="cart-express">
+              <input type="radio" id="express" checked={false} />
+              <div style={{fontWeight:"bold"}}>Express Delivery</div>
+              <Headings type="side">Rs 120 (additional)</Headings>
+            </div>
+          </Box>
+        </div>
       </div>
     </div>
   );

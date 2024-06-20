@@ -335,6 +335,9 @@ figure{
 /* ---------------cart------------------ */
 
 
+
+/* -->shipping */
+
 .cart-head{
     display:flex;
     justify-content:center;
@@ -343,6 +346,7 @@ figure{
 .cart-body{
     display:flex;
     justify-content:center;
+    gap:10rem;
 
 
 }
@@ -353,6 +357,18 @@ figure{
     background-color:red;
     width:20rem;
 } */
+    .cart-express{
+        display:flex;
+        align-items:center;
+        justify-content:space-around;
+        
+
+    }
+
+
+    /* -->ordersummary */
+
+
 
 `;
 

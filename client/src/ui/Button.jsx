@@ -58,6 +58,14 @@ const varient = {
   `,
   danger:css`
   color: ${theme.colors.danger};
+
+  `,
+
+  none:css`
+    background-color:transparent;
+    border:none;
+    color:${theme.colors.primary};
+    font-size:1.5rem;
   `
 };
 

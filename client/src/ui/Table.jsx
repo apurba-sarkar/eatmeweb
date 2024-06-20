@@ -8,6 +8,20 @@ const size = {
   big: css`
     height: 70rem;
   `,
+  special: css`
+    width: 40rem;
+    /* background-color: red; */
+    height: 30rem;
+  `,
+};
+
+const col = {
+  three: css`
+    grid-template-columns: 1fr 2fr 1fr;
+  `,
+  four: css`
+    grid-template-columns: 1fr 2fr 1fr 1fr;
+  `,
 };
 
 const TableBuilder = styled.div`
@@ -35,7 +49,7 @@ const TableData = styled.div`
 
 const TableRow = styled.div`
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
+  ${(props) => col[props.col]};
   /* row-gap:10rem; */
   justify-items: center;
   padding: 1rem 0;
@@ -50,7 +64,8 @@ justify-content:space-around; */
 const TableHead = styled.div`
   display: grid;
   background-color: ${theme.colors.primary};
-  grid-template-columns: 1fr 2fr 1fr;
+  /* grid-template-columns: 1fr 2fr 1fr; */
+  ${(props) => col[props.col]}
   /* row-gap:10rem; */
   justify-items: center;
   padding: 1rem 0;

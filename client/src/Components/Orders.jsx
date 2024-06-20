@@ -10,17 +10,17 @@ export default function Orders() {
       <div className="trans">
         <Headings>Previous Orders</Headings>
         <TableBuilder size="normal">
-          <TableHead>
+          <TableHead col="three">
             <TableData>Date</TableData>
             <TableData style={{ justifySelf: "left" }}>Details</TableData>
             <TableData>Amount</TableData>
           </TableHead>
-          <TableRow>
+          <TableRow col="three">
             <TableData>sada</TableData>
             <TableData style={{ justifySelf: "left" }}>sada</TableData>
             <TableData>sada</TableData>
           </TableRow>
-          <TableRow>
+          <TableRow col="three">
             <TableData>sada</TableData>
             <TableData style={{ justifySelf: "left" }}>sada</TableData>
             <TableData>sada</TableData>
@@ -88,7 +88,9 @@ export default function Orders() {
           Email: <a href="mailto:suport@eatme.com">mailto:suport@eatme.com</a>{" "}
         </Headings>
       </div>
-      <Button varient="primary" size ="m">Log out</Button>
+      <Button varient="primary" size="m">
+        Log out
+      </Button>
     </div>
   );
 }

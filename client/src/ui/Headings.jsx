@@ -23,6 +23,10 @@ const type = {
     font-size: 1.5rem;
     align-self: flex-start;
   `,
+  side:css`
+    font-size:1rem;
+    font-style:italic;
+  `
 };
 
 const colorvar = {

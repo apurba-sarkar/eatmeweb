@@ -27,13 +27,13 @@ export default function Wallet() {
       </figure>
       <div className="trans">
         <Headings>Previous Transaction</Headings>
-        <TableBuilder size="normal">
-          <TableHead>
+        <TableBuilder size="normal" >
+          <TableHead col="three">
             <TableData>Date</TableData>
             <TableData style={{justifySelf:"left"}}>Details</TableData>
             <TableData>Amount</TableData>
           </TableHead>
-          <TableRow>
+          <TableRow col="three">
             <TableData>sada</TableData>
             <TableData style={{justifySelf:"left"}}>sada</TableData>
             <TableData>sada</TableData>

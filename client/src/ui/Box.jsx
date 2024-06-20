@@ -23,6 +23,9 @@ const type = {
     height: 10rem;
     width: 50rem;
   `,
+  box:css`
+    padding: .5rem 0rem;
+  `
 };
 
 const color = {
