@@ -1,12 +1,20 @@
+import { Box } from "../ui/Box";
 import { Button } from "../ui/Button";
 import { Headings } from "../ui/Headings";
+import { Input } from "../ui/Input";
 import { TableBuilder, TableData, TableHead, TableRow } from "../ui/Table";
 
 export default function OrderSummary() {
   return (
     <div>
+       {/* <Box color="none" type="support">
+      <Headings type="h2">Coupon Apply</Headings>
+      <Input varient="input" placeholder="enter here"/>
+      <Button varient="primary">Apply</Button>
+      </Box> */}
+      <Button varient="primary" size="m">Continue</Button>
       <Headings>ORDER SUMMARY</Headings>
-      <div>total item in cart</div>
+      <Headings type="label" >Total item in cart</Headings>
       <TableBuilder size="special">
         <TableHead col="four">
           <TableData>image</TableData>
@@ -34,6 +42,8 @@ export default function OrderSummary() {
           </TableData>
         </TableRow>
       </TableBuilder>
+      
+     
     </div>
   );
 }

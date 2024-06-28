@@ -41,6 +41,9 @@ const color = {
   support: css`
     background-color: ${theme.colors.support};
   `,
+  none:css`
+    background-color:transparent;
+  `
 };
 
 const Box = styled.div`

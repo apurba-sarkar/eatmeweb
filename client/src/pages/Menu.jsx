@@ -24,8 +24,9 @@ export default function Menu() {
       <div className="menu-container">
         <Filters />
         <div className="menu-list">
-          <TableBuilder size="big">
-            <TableHead>
+          <TableBuilder size="big"
+          >
+            <TableHead col="three">
               <TableData>item no</TableData>
               <TableData>Item List</TableData>
               {/* <TableData>Ad</TableData> */}
@@ -33,6 +34,7 @@ export default function Menu() {
             {data.map((e) => (
               // <NavLink to={`/single/${e.id}`} key={e.id}>
               <TableRow
+              col="three"
                 key={e.id}
                 style={{ fontSize: "2rem", fontWeight: "bold" }}
               >
