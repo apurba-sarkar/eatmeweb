@@ -19,7 +19,7 @@ export default function Contactus() {
         <Input placeholder="phone" varient="input" />
         <InputArea placeholder="feedback" />
         <Button varient="primary" size="m">
-          Send <IoMdSend size="1rem" />
+          Send<IoMdSend size="1rem" />
         </Button>
       
       </form>
