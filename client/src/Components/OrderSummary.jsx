@@ -35,6 +35,7 @@ export default function OrderSummary() {
                 {Array.from({ length: 10 }, (_, i) => i + 1).map((num) => (
                   <option value={num} key={num}>
                     {num}
+                    
                   </option>
                 ))}
               </select>
