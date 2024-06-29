@@ -12,7 +12,7 @@ import FullDetails from "../Components/FullDetails";
 // import SingleDish from "./SingleDish";
 export default function Menu() {
   // const navigate = useNavigate();
-  console.log(data);
+  // console.log(data);
   // console.log(data[0].id);
 
   const [dish, setDish] = useState("");

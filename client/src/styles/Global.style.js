@@ -240,7 +240,7 @@ figure{
 .card-number{
 
     /* margin-right:2rem; */
-    font-size:2rem;
+    font-size:3rem;
     
 }
 
@@ -370,6 +370,15 @@ figure{
 
 
 
+
+    /* ----------checkout----------- */
+
+.checkout{
+ display:flex;
+ align-items:center;
+ justify-content:center;
+ flex-direction:column;
+}
 `;
 
 export default GlobalStyle;

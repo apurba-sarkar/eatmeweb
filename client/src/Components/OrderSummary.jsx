@@ -7,22 +7,24 @@ import { TableBuilder, TableData, TableHead, TableRow } from "../ui/Table";
 export default function OrderSummary() {
   return (
     <div>
-       {/* <Box color="none" type="support">
+      {/* <Box color="none" type="support">
       <Headings type="h2">Coupon Apply</Headings>
       <Input varient="input" placeholder="enter here"/>
       <Button varient="primary">Apply</Button>
       </Box> */}
-      <Button varient="primary" size="m">Continue</Button>
+      <Button varient="primary" size="m">
+        Continue
+      </Button>
       <Headings>ORDER SUMMARY</Headings>
-      <Headings type="label" >Total item in cart</Headings>
+      <Headings type="label">Total item in cart</Headings>
       <TableBuilder size="special">
-        <TableHead col="four">
+        <TableHead col="five">
           <TableData>image</TableData>
           <TableData style={{ justifySelf: "left" }}>description</TableData>
           <TableData>price</TableData>
           <TableData>Qnt</TableData>
         </TableHead>
-        <TableRow col="four">
+        <TableRow col="five">
           <TableData>dasd</TableData>
           <TableData style={{ justifySelf: "left" }}>dasd</TableData>
           <TableData>dasd</TableData>
@@ -35,16 +37,16 @@ export default function OrderSummary() {
                 {Array.from({ length: 10 }, (_, i) => i + 1).map((num) => (
                   <option value={num} key={num}>
                     {num}
-                    
                   </option>
                 ))}
               </select>
             </div>
           </TableData>
+          <TableData>
+            <Button size="s" varient="none">Remove</Button>
+          </TableData>
         </TableRow>
       </TableBuilder>
-      
-     
     </div>
   );
 }

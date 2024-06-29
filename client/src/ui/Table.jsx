@@ -22,6 +22,9 @@ const col = {
   four: css`
     grid-template-columns: 1fr 2fr 1fr 1fr;
   `,
+  five: css`
+    grid-template-columns: 1fr 2fr 1fr 1fr 1fr;
+  `,
 };
 
 const TableBuilder = styled.div`
@@ -44,6 +47,8 @@ const TableBuilder = styled.div`
 `;
 
 const TableData = styled.div`
+display:flex;
+align-items:center;
   /* background-color: yellow; */
 `;
 
