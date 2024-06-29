@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "razorpay": "^2.9.4",
     "styled-components": "^6.1.11"
   }
 }
