@@ -1,5 +1,5 @@
 
-# Title: Real-world Resturant website cum delivery system (App name: Eatme) || in developement
+# Title: Real-world Resturant website cum delivery system (App name: Eatmeweb) || in developement
 
 Introduction:
 
