@@ -2,7 +2,7 @@
 # Title: Real-world Resturant website cum delivery system (App name: Eatmeweb) || in developement
 
 Introduction:
-
+A website offering food with food delivery incentives. A user can edit and change their personal information with individual screen. For actions, payment gateway integration, and more, it has a wallet or meal card.
 
 ## Key Features:
 
