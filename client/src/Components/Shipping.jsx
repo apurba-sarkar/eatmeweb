@@ -23,7 +23,7 @@ export default function Shipping() {
           My billing and shipping address are the same
         </Headings>
       </div>
-      <div>
+      {/* <div>
         <Headings>SHIPPING METHODS</Headings>
         <div>
           <Box color="primary" type="box">
@@ -34,7 +34,7 @@ export default function Shipping() {
             </div>
           </Box>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

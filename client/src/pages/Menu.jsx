@@ -9,20 +9,21 @@ import { TableBuilder, TableData, TableHead, TableRow } from "../ui/Table";
 import { Button } from "../ui/Button";
 import { useState } from "react";
 import FullDetails from "../Components/FullDetails";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addDish } from "../reducers/dishSlice";
 // import SingleDish from "./SingleDish";
 export default function Menu() {
   // const navigate = useNavigate();
   // console.log(data);
   // console.log(data[0].id);
-// const dispatch = useDispatch()
-
+  // const dispatch = useDispatch()
+  const fmenu = useSelector((state) => state.menu.allmenu);
   const [dish, setDish] = useState("");
   // console.log(data[0].item);
-// const addToCart=()=>{
-//   dispatch(addDish())
-// }
+  // const addToCart=()=>{
+  //   dispatch(addDish())
+  // }
+  console.log(fmenu)
 
   return (
     <div>
@@ -30,17 +31,16 @@ export default function Menu() {
       <div className="menu-container">
         <Filters />
         <div className="menu-list">
-          <TableBuilder size="big"
-          >
+          <TableBuilder size="big">
             <TableHead col="three">
               <TableData>item no</TableData>
               <TableData>Item List</TableData>
               {/* <TableData>Ad</TableData> */}
             </TableHead>
-            {data.map((e) => (
+            {fmenu.map((e) => (
               // <NavLink to={`/single/${e.id}`} key={e.id}>
               <TableRow
-              col="three"
+                col="three"
                 key={e.id}
                 style={{ fontSize: "2rem", fontWeight: "bold" }}
               >

@@ -25,7 +25,9 @@ const type = {
   `,
   box:css`
     padding: .5rem 0rem;
-  `
+  `,
+   
+
 };
 
 const color = {
@@ -43,7 +45,11 @@ const color = {
   `,
   none:css`
     background-color:transparent;
-  `
+  `,
+   disabled: css`
+   color: black;
+   background-color: ${theme.colors.disabled};
+ `,
 };
 
 const Box = styled.div`

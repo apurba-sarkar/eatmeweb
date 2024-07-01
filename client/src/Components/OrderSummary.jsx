@@ -8,7 +8,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { removeDish } from "../reducers/dishSlice";
 export default function OrderSummary() {
   const addedDishes = useSelector((state) => state.dish.allDishes);
-  console.log(addedDishes);
+  // console.log(addedDishes);
   const navigate = useNavigate();
   const dispatch = useDispatch();
   return (

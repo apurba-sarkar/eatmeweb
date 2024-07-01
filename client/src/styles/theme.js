@@ -4,6 +4,7 @@ export const theme = {
     secondary: "#C2E0C9",
     other: "#ffff",
     danger: "#FF0000",
-    support:"#CDE8E5"
+    support:"#CDE8E5",
+    disabled:"#808080"
   },
 };

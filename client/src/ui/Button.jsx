@@ -56,17 +56,20 @@ const varient = {
     text-decoration: underline;
     border: none;
   `,
-  danger:css`
-  color: ${theme.colors.danger};
-
+  danger: css`
+    color: ${theme.colors.danger};
+  `,
+  disabled: css`
+    color: black;
+    background-color: ${theme.colors.disabled};
   `,
 
-  none:css`
-    background-color:transparent;
-    border:none;
-    color:${theme.colors.primary};
-    font-size:1.5rem;
-  `
+  none: css`
+    background-color: transparent;
+    border: none;
+    color: ${theme.colors.primary};
+    font-size: 1.5rem;
+  `,
 };
 
 const Button = styled.button`
