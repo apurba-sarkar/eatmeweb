@@ -9,14 +9,20 @@ import { TableBuilder, TableData, TableHead, TableRow } from "../ui/Table";
 import { Button } from "../ui/Button";
 import { useState } from "react";
 import FullDetails from "../Components/FullDetails";
+import { useDispatch } from "react-redux";
+import { addDish } from "../reducers/dishSlice";
 // import SingleDish from "./SingleDish";
 export default function Menu() {
   // const navigate = useNavigate();
   // console.log(data);
   // console.log(data[0].id);
+// const dispatch = useDispatch()
 
   const [dish, setDish] = useState("");
   // console.log(data[0].item);
+// const addToCart=()=>{
+//   dispatch(addDish())
+// }
 
   return (
     <div>

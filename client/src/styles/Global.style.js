@@ -379,6 +379,18 @@ figure{
  justify-content:center;
  flex-direction:column;
 }
+
+.checkout-coupon{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    gap:2rem;
+}
+
+
+.checkout-table{
+    margin-top:2rem;
+}
 `;
 
 export default GlobalStyle;

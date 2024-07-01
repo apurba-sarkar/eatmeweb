@@ -3,7 +3,9 @@ import { Headings } from "../ui/Headings";
 import { TableBuilder, TableData, TableHead, TableRow } from "../ui/Table";
 import { RiCustomerServiceFill } from "react-icons/ri";
 
+
 export default function Orders() {
+ 
   return (
     <div className="orders">
       {" "}
@@ -15,66 +17,15 @@ export default function Orders() {
             <TableData style={{ justifySelf: "left" }}>Details</TableData>
             <TableData>Amount</TableData>
           </TableHead>
+          {
+
+          }
           <TableRow col="three">
             <TableData>sada</TableData>
             <TableData style={{ justifySelf: "left" }}>sada</TableData>
             <TableData>sada</TableData>
           </TableRow>
-          <TableRow col="three">
-            <TableData>sada</TableData>
-            <TableData style={{ justifySelf: "left" }}>sada</TableData>
-            <TableData>sada</TableData>
-          </TableRow>
-          <TableRow>
-            <TableData>sada</TableData>
-            <TableData style={{ justifySelf: "left" }}>sada</TableData>
-            <TableData>sada</TableData>
-          </TableRow>
-          <TableRow>
-            <TableData>sada</TableData>
-            <TableData style={{ justifySelf: "left" }}>sada</TableData>
-            <TableData>sada</TableData>
-          </TableRow>
-          <TableRow>
-            <TableData>sada</TableData>
-            <TableData style={{ justifySelf: "left" }}>sada</TableData>
-            <TableData>sada</TableData>
-          </TableRow>
-          <TableRow>
-            <TableData>sada</TableData>
-            <TableData style={{ justifySelf: "left" }}>sada</TableData>
-            <TableData>sada</TableData>
-          </TableRow>
-          <TableRow>
-            <TableData>sada</TableData>
-            <TableData style={{ justifySelf: "left" }}>sada</TableData>
-            <TableData>sada</TableData>
-          </TableRow>
-          <TableRow>
-            <TableData>sada</TableData>
-            <TableData style={{ justifySelf: "left" }}>sada</TableData>
-            <TableData>sada</TableData>
-          </TableRow>
-          <TableRow>
-            <TableData>sada</TableData>
-            <TableData style={{ justifySelf: "left" }}>sada</TableData>
-            <TableData>sada</TableData>
-          </TableRow>
-          <TableRow>
-            <TableData>sada</TableData>
-            <TableData style={{ justifySelf: "left" }}>sada</TableData>
-            <TableData>sada</TableData>
-          </TableRow>
-          <TableRow>
-            <TableData>sada</TableData>
-            <TableData style={{ justifySelf: "left" }}>sada</TableData>
-            <TableData>sada</TableData>
-          </TableRow>
-          <TableRow>
-            <TableData>sada</TableData>
-            <TableData style={{ justifySelf: "left" }}>sada</TableData>
-            <TableData>sada</TableData>
-          </TableRow>
+       
         </TableBuilder>
       </div>
       <div className="support">

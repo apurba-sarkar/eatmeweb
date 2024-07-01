@@ -2,11 +2,18 @@
 import React from "react";
 import { Headings } from "../ui/Headings";
 import { Button } from "../ui/Button";
+import { useDispatch } from "react-redux";
+import { addDish } from "../reducers/dishSlice";
 
 export default function FullDetails({ dish }) {
+  const dispatch=useDispatch()
   const time = Math.floor(Math.random() * 100);
-  console.log(dish);
-  console.log(time);
+  const addToCart=()=>{
+    dispatch(addDish(dish))
+  }
+  
+  // console.log(dish);
+  // console.log(time);
   return (
     <>
       {!dish.id ? (
@@ -40,7 +47,7 @@ export default function FullDetails({ dish }) {
                 <div>Formula x</div>
               </Headings>
             </div>
-            <Button varient="primary">Add To Cart</Button>
+            <Button varient="primary" onClick={addToCart}>Add To Cart</Button>
           </div>
         </>
       )}

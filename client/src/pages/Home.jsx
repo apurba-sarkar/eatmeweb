@@ -1,9 +1,11 @@
 /* eslint-disable react/no-unescaped-entities */
 
+import { useNavigate } from "react-router-dom";
 import { Button } from "../ui/Button";
 import { Headings } from "../ui/Headings";
 
 export default function Home() {
+  const navigate= useNavigate()
   return (
     <div className="home">
       
@@ -20,7 +22,7 @@ export default function Home() {
             dishes are designed to not only satiate your hunger but to create a
             memorable dining experience.
           </p>
-          <Button varient="primary" size="l">Book A Table</Button>
+          <Button varient="primary" size="l" onClick={()=>navigate("/menu")}>Order Now</Button>
         </div>
         <div className="homeimg">
           <img src="./burger.png" alt="" />

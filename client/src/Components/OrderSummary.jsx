@@ -1,18 +1,19 @@
+import { useNavigate } from "react-router-dom";
 import { Box } from "../ui/Box";
 import { Button } from "../ui/Button";
 import { Headings } from "../ui/Headings";
 import { Input } from "../ui/Input";
 import { TableBuilder, TableData, TableHead, TableRow } from "../ui/Table";
-
+import { useDispatch, useSelector } from "react-redux";
+import { removeDish } from "../reducers/dishSlice";
 export default function OrderSummary() {
+  const addedDishes = useSelector((state) => state.dish.allDishes);
+  console.log(addedDishes);
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
   return (
     <div>
-      {/* <Box color="none" type="support">
-      <Headings type="h2">Coupon Apply</Headings>
-      <Input varient="input" placeholder="enter here"/>
-      <Button varient="primary">Apply</Button>
-      </Box> */}
-      <Button varient="primary" size="m">
+      <Button varient="primary" size="m" onClick={() => navigate("/checkout")}>
         Continue
       </Button>
       <Headings>ORDER SUMMARY</Headings>
@@ -24,28 +25,42 @@ export default function OrderSummary() {
           <TableData>price</TableData>
           <TableData>Qnt</TableData>
         </TableHead>
-        <TableRow col="five">
-          <TableData>dasd</TableData>
-          <TableData style={{ justifySelf: "left" }}>dasd</TableData>
-          <TableData>dasd</TableData>
-          <TableData>
-            <div>
-              {/* <Button varient="none">+</Button>
-              <span>sd</span>
-              <Button varient="none">-</Button> */}
-              <select>
-                {Array.from({ length: 10 }, (_, i) => i + 1).map((num) => (
-                  <option value={num} key={num}>
-                    {num}
-                  </option>
-                ))}
-              </select>
+        {addedDishes.map((e) => {
+          return (
+            <div key={e.id}>
+              <TableRow col="five">
+                <TableData>X</TableData>
+                <TableData style={{ justifySelf: "left" }}>{e.item}</TableData>
+                <TableData>{e.price}</TableData>
+                <TableData>
+                  <div>
+                    {/* <Button varient="none">+</Button>
+                <span>sd</span>
+                <Button varient="none">-</Button> */}
+                    <select>
+                      {Array.from({ length: 10 }, (_, i) => i + 1).map(
+                        (num) => (
+                          <option value={num} key={num}>
+                            {num}
+                          </option>
+                        )
+                      )}
+                    </select>
+                  </div>
+                </TableData>
+                <TableData>
+                  <Button
+                    size="s"
+                    varient="none"
+                    onClick={()=>dispatch(removeDish(e.id))}
+                  >
+                    Remove
+                  </Button>
+                </TableData>
+              </TableRow>
             </div>
-          </TableData>
-          <TableData>
-            <Button size="s" varient="none">Remove</Button>
-          </TableData>
-        </TableRow>
+          );
+        })}
       </TableBuilder>
     </div>
   );
