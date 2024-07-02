@@ -23,10 +23,10 @@ const type = {
     font-size: 1.5rem;
     align-self: flex-start;
   `,
-  side:css`
-    font-size:1rem;
-    font-style:italic;
-  `
+  side: css`
+    font-size: 1rem;
+    font-style: italic;
+  `,
 };
 
 const colorvar = {
@@ -40,6 +40,9 @@ const colorvar = {
     color: ${theme.colors.other};
   `,
   danger: css`
+    color: ${theme.colors.danger};
+  `,
+  validate: css`
     color: ${theme.colors.danger};
   `,
 };

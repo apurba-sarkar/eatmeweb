@@ -2,8 +2,44 @@ import { useNavigate } from "react-router-dom";
 import { Headings } from "../ui/Headings";
 import { Input } from "../ui/Input";
 import { Button } from "../ui/Button";
+import { useState } from "react";
 
 export default function Signup() {
+  const template = {
+    fullname: "",
+    pincode: "",
+    mobile: "",
+    email: "",
+    password: "",
+    cpassword: "",
+  };
+  const [filledData, setFilledData] = useState(template);
+  const [notAllow, setNotAllow] = useState(false);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+
+    setFilledData({
+      ...filledData,
+      [name]: value,
+    });
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const allow = filledData.password == filledData.cpassword;
+    if (allow) {
+      const { cpassword, ...fd } = filledData;
+      // delete filledData.cpassword;
+      // const { password, cpassword, ...dataWithoutCPassword } = filledData;
+      // console.log(filledData);
+      console.log(fd);
+      setFilledData(template);
+    } else {
+      setNotAllow(true);
+      console.log("mismatch");
+    }
+  };
+
   const navigate = useNavigate();
   return (
     <div>
@@ -16,13 +52,57 @@ export default function Signup() {
         <div className="login-card">
           <div className="login-photo">photo</div>
           <div className="login-data">
-            <Input placeholder="full name" type="text" varient="input" />
-            <Input placeholder="pincode" type="text" varient="input" />
-            <Input placeholder="mobile" type="text" varient="input" />
-            <Input placeholder="email" type="email" varient="input" />
-            <Input placeholder="password" type="password" varient="input" />
-            <Input placeholder="confirm password" type="password" varient="input" />
-            <Button varient="primary" size="m">
+            <Input
+              placeholder="full name"
+              type="text"
+              varient="input"
+              name="fullname"
+              value={filledData.fullname}
+              onChange={handleChange}
+            />
+            <Input
+              placeholder="pincode"
+              type="text"
+              varient="input"
+              name="pincode"
+              value={filledData.pincode}
+              onChange={handleChange}
+            />
+            <Input
+              placeholder="mobile"
+              type="text"
+              varient="input"
+              name="mobile"
+              value={filledData.mobile}
+              onChange={handleChange}
+            />
+            <Input
+              placeholder="email"
+              type="email"
+              varient="input"
+              name="email"
+              value={filledData.email}
+              onChange={handleChange}
+            />
+            <Input
+              placeholder="password"
+              type="password"
+              varient="input"
+              name="password"
+              value={filledData.password}
+              onChange={handleChange}
+            />
+
+            <Input
+              placeholder="confirm password"
+              type="password"
+              name="cpassword"
+              varient="input"
+              value={filledData.cpassword}
+              onChange={handleChange}
+            />
+            <Headings type="side">dsdds</Headings>
+            <Button varient="primary" size="m" onClick={handleSubmit}>
               {" "}
               Create Account
             </Button>
