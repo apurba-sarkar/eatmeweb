@@ -3,18 +3,24 @@ import { Headings } from "../ui/Headings";
 import { Input } from "../ui/Input";
 import { Button } from "../ui/Button";
 import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { addUser } from "../reducers/userSlice";
 
 export default function Signup() {
+  const dispatch = useDispatch();
+  const allUsers = useSelector((state) => state.user.alluser);
   const template = {
     fullname: "",
     pincode: "",
     mobile: "",
     email: "",
+    address: "",
     password: "",
     cpassword: "",
   };
   const [filledData, setFilledData] = useState(template);
   const [notAllow, setNotAllow] = useState(false);
+  const [popUp, setPopUp] = useState(true);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -24,20 +30,44 @@ export default function Signup() {
       [name]: value,
     });
   };
+
   const handleSubmit = (e) => {
+   
+    console.log(allUsers);
+    validation();
     e.preventDefault();
     const allow = filledData.password == filledData.cpassword;
-    if (allow) {
+    if (allow && !popUp) {
       const { cpassword, ...fd } = filledData;
       // delete filledData.cpassword;
       // const { password, cpassword, ...dataWithoutCPassword } = filledData;
       // console.log(filledData);
+      dispatch(addUser(filledData));
       console.log(fd);
       setFilledData(template);
+      setNotAllow(true);
+      confirmWindow();
+      
     } else {
       setNotAllow(true);
       console.log("mismatch");
+      setPopUp(false);
     }
+  };
+
+  const confirmWindow = () => {
+    alert("congratulation");
+  };
+
+  const validation = () => {
+    for (let key in filledData) {
+      if (filledData[key] === "") {
+        setPopUp("please fill the all filled");
+        alert("please fill the all filled");
+        return false;
+      }
+    }
+    return true;
   };
 
   const navigate = useNavigate();
@@ -85,6 +115,14 @@ export default function Signup() {
               onChange={handleChange}
             />
             <Input
+              placeholder="address"
+              type="text"
+              varient="input"
+              name="address"
+              value={filledData.address}
+              onChange={handleChange}
+            />
+            <Input
               placeholder="password"
               type="password"
               varient="input"
@@ -101,14 +139,22 @@ export default function Signup() {
               value={filledData.cpassword}
               onChange={handleChange}
             />
-            <Headings type="side">dsdds</Headings>
+            {notAllow && (
+              <Headings type="side" colorvar="danger">
+                Password and Confirm Password are different
+              </Headings>
+            )}
             <Button varient="primary" size="m" onClick={handleSubmit}>
               {" "}
               Create Account
             </Button>
             <h2>
               already Have an account?
-              <Button varient="register" size="other">
+              <Button
+                varient="register"
+                size="other"
+                onClick={() => navigate("/login")}
+              >
                 login
               </Button>
               here{" "}
