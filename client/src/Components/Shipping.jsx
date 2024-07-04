@@ -1,24 +1,28 @@
-import { Box } from "../ui/Box";
+import { useSelector } from "react-redux";
+// import { Box } from "../ui/Box";
 import { Headings } from "../ui/Headings";
 import { Input } from "../ui/Input";
 
 export default function Shipping() {
+  const activeUserData = useSelector((state) => state.loginUser.activeUser);
+  const { fullname, address, pincode, mobile } = activeUserData;
+  console.log(activeUserData);
   return (
     <div>
       <div>
         <Headings>SHIPPING</Headings>
         <Headings type="label">Full Name</Headings>
-        <Input placeholder="" />
+        <Input placeholder="" disabled value={fullname} />
         <Headings type="label">Address</Headings>
-        <Input placeholder="" />
+        <Input placeholder="" disabled value={address} />
         <Headings type="label">Country</Headings>
-        <Input placeholder="" />
-        <Headings type="label">City</Headings>
-        <Input placeholder="" />
+        <Input placeholder="" value="india" disabled />
+        {/* <Headings type="label">City</Headings>
+        <Input placeholder="" /> */}
         <Headings type="label">Pincode</Headings>
-        <Input placeholder="" />
+        <Input placeholder="" disabled value={pincode} />
         <Headings type="label">Phone Number</Headings>
-        <Input placeholder="" />
+        <Input placeholder="" disabled value={mobile} />
         <Headings type="label" colorvar="danger">
           My billing and shipping address are the same
         </Headings>

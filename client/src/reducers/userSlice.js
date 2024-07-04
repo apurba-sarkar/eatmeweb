@@ -6,7 +6,16 @@ const userlist = [
     pincode: "743230",
     mobile: "9807653873",
     email: "apurba@gmail.com",
+    password: "12345",
+    address:"kolkata"
+  },
+  {
+    fullname: "apurba sarkar",
+    pincode: "743230",
+    mobile: "9807653873",
+    email: "apurba@gmail.coma",
     password: "123456",
+    address:"ranaghat"
   },
 ];
 const initialState = {
@@ -24,4 +33,4 @@ const userSlice = createSlice({
 });
 
 export const { addUser } = userSlice.actions;
-export default userSlice.reducer
+export default userSlice.reducer;

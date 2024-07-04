@@ -1,18 +1,39 @@
-import React from "react";
+// import React from "react";
 import { Headings } from "../ui/Headings";
 import { Button } from "../ui/Button";
 import { Input } from "../ui/Input";
 import { Box } from "../ui/Box";
-import PaymentComponent from "../Components/PaymentComponent";
+// import PaymentComponent from "../Components/PaymentComponent";
 import { TableBuilder, TableData, TableHead, TableRow } from "../ui/Table";
 import { useSelector } from "react-redux";
+import { useState } from "react";
 
 export default function CheckOut() {
+  const couponList = useSelector((state) => state.coupon.allCoupons);
+  const [cApplied,setCApplied] = useState(null);
+  const [coupon, setCoupon] = useState("");
+
   const cartDishes = useSelector((state) => state.dish.allDishes);
-  console.log(cartDishes);
+  // console.log(cartDishes);
   const totalPrice = cartDishes.reduce((total, dish) => total + dish.price, 0);
   const totalDish = cartDishes.length;
-  console.log(totalPrice, totalDish);
+  // console.log(totalPrice, totalDish);
+
+  const handleCheckCoupon = () => {
+    couponChecker();
+    // console.log(coupon);
+    console.log(cApplied);
+    // console.log(couponList);
+  };
+
+  const couponChecker = () => {
+    const couponExist = couponList.find((item) => item.cid === coupon);
+    couponExist ? console.log("present") : console.log("not found");
+    console.log(couponExist);
+    setCApplied(couponExist?.discount);
+  
+  };
+
   const orderIdGen = () => {
     const now = new Date();
     const hours = now.getHours();
@@ -21,11 +42,10 @@ export default function CheckOut() {
     const nows = hours * 10000 + minutes * 100 + seconds;
     return nows;
   };
+  const Gst = Math.round(totalPrice * 0.18, 0);
 
-  const Gst =Math.round( totalPrice * 0.18,0) ;
-  const coupon = 99
-  const finalprice= totalPrice+ Gst - coupon
-    return (
+  const finalprice = totalPrice + Gst - cApplied;
+  return (
     <div className="checkout">
       <Headings type="h1" colorvar="primary">
         CHECKOUT
@@ -34,9 +54,16 @@ export default function CheckOut() {
       <Box color="none" type="support">
         <Headings type="h2">Apply coupon</Headings>
         <div className="checkout-coupon">
-          <Input varient="input" placeholder="enter here" />
+          <Input
+            varient="input"
+            placeholder="enter here"
+            value={coupon}
+            onChange={(e) => setCoupon(e.target.value)}
+          />
 
-          <Button varient="primary">Apply</Button>
+          <Button varient="primary" onClick={handleCheckCoupon}>
+            Apply
+          </Button>
         </div>
       </Box>
       <div className="checkout-table">
@@ -59,14 +86,12 @@ export default function CheckOut() {
           <TableRow col="three">
             <TableData></TableData>
             <TableData>Coupon Applied</TableData>
-            <TableData>{coupon}</TableData>
+            <TableData> - {cApplied}</TableData>
           </TableRow>
           <TableRow col="three" style={{ fontWeight: "bold" }}>
             <TableData></TableData>
             <TableData>Final Rs</TableData>
-            <TableData>
-            {finalprice}
-            </TableData>
+            <TableData>{finalprice}</TableData>
           </TableRow>
         </TableBuilder>
         {/* <PaymentComponent /> */}

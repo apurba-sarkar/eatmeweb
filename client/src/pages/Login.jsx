@@ -1,11 +1,14 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Button } from "../ui/Button";
 import { Headings } from "../ui/Headings";
 import { Input } from "../ui/Input";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import { addLoginUser } from "../reducers/loginUserSlice";
 
 export default function Login() {
+  const dispatch = useDispatch();
+
   const [filledData, setFilledData] = useState({
     email: "",
     password: "",
@@ -19,20 +22,30 @@ export default function Login() {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(filledData);
+    // console.log(filledData);
     userExist();
   };
   const userExist = () => {
     let userEmail = filledData.email;
-    const isUserPresent = userList.find((item) => item.email === userEmail);
+    let loginUserAttempt = userList.find((item) => item.email === userEmail);
+    const isUserPresent = loginUserAttempt;
     isUserPresent ? console.log("pressent") : console.log("not found");
 
-    if(isUserPresent){
+    if (isUserPresent) {
+      const present = userList.some(
+        (user) =>
+          user.email === filledData.email &&
+          user.password === filledData.password
+      );
+      console.log(loginUserAttempt);
+      dispatch(addLoginUser(loginUserAttempt));
 
-      return userList
+      present
+        ? navigate("/menu")
+        : console.log("username or password is incorrect");
+
       // const password = userList.find((item) => item.password === filledData.password)
     }
-    
 
     // console.log(userList)
   };

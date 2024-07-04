@@ -23,7 +23,7 @@ export default function Menu() {
   // const addToCart=()=>{
   //   dispatch(addDish())
   // }
-  console.log(fmenu)
+  // console.log(fmenu)
 
   return (
     <div>
