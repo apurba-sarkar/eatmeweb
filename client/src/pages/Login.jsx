@@ -5,9 +5,11 @@ import { Input } from "../ui/Input";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { addLoginUser } from "../reducers/loginUserSlice";
+import { login } from "../reducers/authSlice";
 
 export default function Login() {
   const dispatch = useDispatch();
+  const auth = useSelector((state) => state.auth.isAuthenticated);
 
   const [filledData, setFilledData] = useState({
     email: "",
@@ -32,6 +34,13 @@ export default function Login() {
     isUserPresent ? console.log("pressent") : console.log("not found");
 
     if (isUserPresent) {
+      const handleAllowed = () => {
+       dispatch(login(true))
+        console.log(auth);
+
+        alert("s")
+        navigate("/menu");
+      };
       const present = userList.some(
         (user) =>
           user.email === filledData.email &&
@@ -41,7 +50,7 @@ export default function Login() {
       dispatch(addLoginUser(loginUserAttempt));
 
       present
-        ? navigate("/menu")
+        ? handleAllowed()
         : console.log("username or password is incorrect");
 
       // const password = userList.find((item) => item.password === filledData.password)

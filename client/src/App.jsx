@@ -18,6 +18,7 @@ import Cart from "./pages/Cart";
 import CheckOut from "./pages/CheckOut";
 import { Provider } from "react-redux";
 import store from "./store";
+import ProtectedRoute from "./Components/ProtectedRoute";
 
 function App() {
   return (
@@ -27,13 +28,25 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route exact path="/login" element={<Login />} />
-          <Route exact path="/profile" element={<Profile />} />
+          <Route
+            exact
+            path="/profile"
+            element={<ProtectedRoute element={<Profile />} />}
+          />
           <Route exact path="/signup" element={<Signup />} />
           <Route exact path="/Menu" element={<Menu />} />
           <Route exact path="/aboutus" element={<Aboutus />} />
           <Route exact path="/contactus" element={<Contactus />} />
-          <Route exact path="/cart" element={<Cart />} />
-          <Route exact path="/checkout" element={<CheckOut />} />
+          <Route
+            exact
+            path="/cart"
+            element={<ProtectedRoute element={<Cart />} />}
+          />
+          <Route
+            exact
+            path="/checkout"
+            element={<ProtectedRoute element={<CheckOut />} />}
+          />
           <Route path="/single/:id" element={<SingleDish />} />
         </Routes>
         <Footer />

@@ -6,14 +6,16 @@ import { RiCustomerServiceFill } from "react-icons/ri";
 import { logout } from "../reducers/loginUserSlice";
 import { useNavigate } from "react-router-dom";
 import { dateparser } from "./../helper/dateParser";
+import { logoutA } from "../reducers/authSlice";
 
 export default function Orders() {
   const allOrders = useSelector((state) => state.order.allorder);
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const handleLogout = () => {
-    dispatch(logout);
-    navigate("/");
+    
+    dispatch(logoutA(false));
+    // navigate("/");
   };
   console.log(allOrders);
 

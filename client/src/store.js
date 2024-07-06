@@ -6,15 +6,24 @@ import loginUserReducer from "./reducers/loginUserSlice";
 import couponReducer from "./reducers/couponSlice";
 import tranReducer from "./reducers/tranSlice";
 import orderReducer from "./reducers/orderSlice";
-const store = configureStore({
-  reducer: {
-    dish: dishReducer,
-    menu: menuReducer,
-    user: userReducer,
-    loginUser: loginUserReducer,
-    coupon: couponReducer,
-    tran: tranReducer,
-    order: orderReducer,
+import authReducer from "./reducers/authSlice"
+import { applyMiddleware } from "@reduxjs/toolkit";
+import { thunk } from "redux-thunk";
+// const applyMiddleware = redux.applyMiddleware;
+
+const store = configureStore(
+  {
+    reducer: {
+      dish: dishReducer,
+      menu: menuReducer,
+      user: userReducer,
+      loginUser: loginUserReducer,
+      coupon: couponReducer,
+      tran: tranReducer,
+      order: orderReducer,
+      auth:authReducer
+    },
   },
-});
+// middleware:()
+);
 export default store;
