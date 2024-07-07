@@ -15,18 +15,17 @@ import { fetchData } from "../reducers/menuSlice";
 
 // import SingleDish from "./SingleDish";
 export default function Menu() {
-
   // const navigate = useNavigate();
   // console.log(data);
   // console.log(data[0].id);
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
   // const user = useSelector((state) => state.menu.user);
   // const status = useSelector((state) => state.menu.status);
   // const error = useSelector((state) => state.menu.error);
-// ------------------
+  // ------------------
   const fmenu = useSelector((state) => state.menu.allmenu);
   const [dish, setDish] = useState("");
-  
+
   // console.log(data[0].item);
   // const addToCart=()=>{
   //   dispatch(addDish())
@@ -73,9 +72,7 @@ export default function Menu() {
         <div>
           <FullDetails dish={dish} />
         </div>
-        {/* <SingleDish/> */}
       </div>
-      {/* <button onClick={()=>dispatch(fetchData())}>go</button> */}
     </div>
   );
 }

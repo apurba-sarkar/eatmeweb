@@ -5,12 +5,17 @@ import { Input } from "../ui/Input";
 import { Box } from "../ui/Box";
 // import PaymentComponent from "../Components/PaymentComponent";
 import { TableBuilder, TableData, TableHead, TableRow } from "../ui/Table";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
+import { addOrder } from "../reducers/orderSlice";
 
 export default function CheckOut() {
+  const all = useSelector((state) => state.order.allorder);
+  console.log(all)
+  // --------------------
+  const dispatch = useDispatch();
   const couponList = useSelector((state) => state.coupon.allCoupons);
-  const [cApplied,setCApplied] = useState(null);
+  const [cApplied, setCApplied] = useState(null);
   const [coupon, setCoupon] = useState("");
 
   const cartDishes = useSelector((state) => state.dish.allDishes);
@@ -31,11 +36,10 @@ export default function CheckOut() {
     couponExist ? console.log("present") : console.log("not found");
     console.log(couponExist);
     setCApplied(couponExist?.discount);
-  
   };
 
+  const now = new Date();
   const orderIdGen = () => {
-    const now = new Date();
     const hours = now.getHours();
     const minutes = now.getMinutes();
     const seconds = now.getSeconds();
@@ -45,6 +49,19 @@ export default function CheckOut() {
   const Gst = Math.round(totalPrice * 0.18, 0);
 
   const finalprice = totalPrice + Gst - cApplied;
+
+  const confirm = () => {
+    const daya = {
+      orderid: orderIdGen(),
+      date: "10-10-12",
+      itemc: totalDish,
+      price: totalPrice,
+    };
+
+    // dispatch(addOrder(daya));
+    console.log(all);
+    console.log(daya)
+  };
   return (
     <div className="checkout">
       <Headings type="h1" colorvar="primary">
@@ -96,7 +113,7 @@ export default function CheckOut() {
         </TableBuilder>
         {/* <PaymentComponent /> */}
       </div>
-      <Button varient="primary" size="m">
+      <Button varient="primary" size="m" onClick={confirm}>
         Confirm
       </Button>
       <Headings colorvar="danger">

@@ -4,6 +4,18 @@ import { TableBuilder, TableData, TableHead, TableRow } from "../ui/Table";
 
 export default function Wallet() {
   const allTrans = useSelector((state) => state.tran.alltran);
+  const totalBal = () => {
+    const totalFund = allTrans.reduce(
+      (sum, transaction) =>
+        transaction.type === "add"
+          ? sum + transaction.price
+          : sum - transaction.price,
+      0
+    );
+
+    return totalFund;
+  };
+  totalBal();
   // console.log(allTrans);
   return (
     <div>
@@ -20,7 +32,7 @@ export default function Wallet() {
               <div>RICKY SARKAR</div>
             </div>
             <div className="balance">
-              <span>₹</span> 500
+              <span>₹</span> {totalBal()}
             </div>
           </div>
         </div>
@@ -37,12 +49,18 @@ export default function Wallet() {
           {allTrans.map((e) => {
             return (
               <div key={e.key}>
-                <TableRow col="three">
+                <TableRow
+                  col="three"
+                  style={
+                    e.type === "add" ? { color: "green" } : { color: "red" }
+                  }
+                >
                   <TableData>{e.date}</TableData>
                   <TableData style={{ justifySelf: "left" }}>
-                    {e.type==="add"? "payment":"dedeucted"}
-                    
-                    </TableData>
+                    {e.type === "add"
+                      ? "Money added to wallet"
+                      : "Money deducted"}
+                  </TableData>
                   <TableData>&#8377; {e.price}</TableData>
                 </TableRow>
               </div>

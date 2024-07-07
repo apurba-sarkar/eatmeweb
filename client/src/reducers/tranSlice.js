@@ -7,7 +7,7 @@ const tranlist = [
     itemc: 1,
     price: 400,
     type: "add",
-    date: "10-03-24",
+    date: "11-07-24",
   },
   {
     key: 2,
@@ -15,7 +15,7 @@ const tranlist = [
     itemc: 4,
     price: 451,
     type: "pay",
-    date: "10-03-24",
+    date: "04-06-24",
   },
   {
     key: 3,
@@ -23,7 +23,7 @@ const tranlist = [
     itemc: 1,
     price: 122,
     type: "pay",
-    date: "11-04-24",
+    date: "01-06-24",
   },
   {
     key: 4,
@@ -31,7 +31,7 @@ const tranlist = [
     itemc: 5,
     price: 745,
     type: "pay",
-    date: "18-06-24",
+    date: "18-05-24",
   },
   {
     key: 5,
@@ -39,7 +39,7 @@ const tranlist = [
     itemc: 7,
     price: 500,
     type: "add",
-    date: "22-07-24",
+    date: "10-05-24",
   },
 
   {
@@ -48,7 +48,7 @@ const tranlist = [
     itemc: 6,
     price: 1000,
     type: "add",
-    date: "27-08-24",
+    date: "27-04-24",
   },
   {
     key: 7,
@@ -56,7 +56,15 @@ const tranlist = [
     itemc: 7,
     price: 745,
     type: "pay",
-    date: "28-08-24",
+    date: "26-04-24",
+  },
+  {
+    key: 8,
+    oderid: "178388",
+    itemc: 7,
+    price: 700,
+    type: "add",
+    date: "26-04-24",
   },
 ];
 
