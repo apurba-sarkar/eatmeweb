@@ -12,7 +12,7 @@ import "react-toastify/dist/ReactToastify.css";
 export default function Login() {
   const dispatch=useDispatch()
   const loggedIn =useSelector((state)=>state.auth.isAuthenticated)
-  console.log(loggedIn)
+  // console.log(loggedIn)
   const notify = () =>
     toast.success("Login Succesfull", {
       position: "top-center",
@@ -89,7 +89,7 @@ export default function Login() {
           user.email === filledData.email &&
           user.password === filledData.password
       );
-      console.log(loginUserAttempt);
+      // console.log(loginUserAttempt);
       dispatch(addLoginUser(loginUserAttempt));
 
       present
