@@ -19,12 +19,14 @@ import CheckOut from "./pages/CheckOut";
 import { Provider } from "react-redux";
 import store from "./store";
 import ProtectedRoute from "./Components/ProtectedRoute";
+import HamNav from "./Components/HamNav";
 
 function App() {
   return (
     <>
       <Provider store={store}>
-        <Navbar />
+        <HamNav/>
+        {/* <Navbar /> */}
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route exact path="/login" element={<Login />} />

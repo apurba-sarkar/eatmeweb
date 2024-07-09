@@ -48,22 +48,44 @@ a:hover{
     
 }
 
+/* -----------hamnav------------ */
 
+.hamNav{
+    display:flex;
+    align-items:start;
+    justify-content:space-between;
+    padding:1rem 2rem;
+}
+
+.spec{
+    margin-top:-3rem;
+}
+
+
+.hamlinks-bur{
+    position:absolute;
+    z-index:1;
+    background-color:red;
+    padding:1rem 2rem;
+    /* font-size:20rem; */
+}
+
+
+.hamNav {
+    display:flex;
+    align-items:stretch;
+    flex-direction:column
+    /* justify-items:end; */
+}
 /* ⁡------home--------- */
 
 
 .homeimg img{
     height:60rem;
+    /* min-width:20rem; */
     /* background-color:red */
 
 }
-@media (width< 1000px) {
-    .homeimg img{
-    height:40rem;
-    /* background-color:red */
-}
-}
-
 
 
 .home-hero{
@@ -73,6 +95,7 @@ a:hover{
     gap:10rem;
     padding-top:2rem
 }
+
 
 p{
 font-size:2rem;

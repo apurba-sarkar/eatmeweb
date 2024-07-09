@@ -42,9 +42,7 @@ const colorvar = {
   danger: css`
     color: ${theme.colors.danger};
   `,
-  validate: css`
-    color: ${theme.colors.danger};
-  `,
+ 
 };
 
 const Headings = styled.h1`
